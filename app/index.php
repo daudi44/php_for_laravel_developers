@@ -1,17 +1,27 @@
 <?php
 
-//Query String per agafar info dinàmica
-//var_dump ($_GET['name']);
+require 'app/helpers.php';
+require 'app/Task.php';
 
-//API
-function greet(){
-    $name = htmlspecialchars($name = htmlspecialchars());
-    $cognom = htmlspecialchars($_GET['cognom']);
+//Exemple de creació de tasques
+//$task = new Task(1,'Buy bread','A la panaderia',0);
+//var_dump($task);
 
-    return "Hello ${name} ${cognom}!";
+//PDO
+$user = 'debian-sys-maint';
+$pass = 'V78vxxs2OflGCP39';
+
+try {
+    $dbh = new PDO('mysql:host=localhost;dbname=phplaraveldevs', $user, $pass);
+}catch(\Exception $exception){
+    echo 'Error de connexió a la base de dades';
 }
+
+$statement = $dbh->prepare('SELECT * FROM tasks;');
+$statement->execute();
+$tasks = $statement->fetchAll(PDO::FETCH_OBJ);
+//var_dump($tasks);
+
+
+//Crido la funció greet
 $greeting = greet();
-
-
-//Una altra manera de concatenar
-//$greeting = 'Hello ' . $_GET['name'] . ' ' . $_GET['cognom'] . '!';

@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        html{
+            background-color: bisque;
+        }
         header{
             background: darkorange;
             padding: 2em;
@@ -15,11 +18,31 @@
         h1{
             color: white;
         }
+        table{
+            background-color: azure;
+            padding: 1em;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1><?=$greeting;?></h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Completed</th>
+            </tr>
+            <?php foreach ($tasks as $task): ?>
+            <tr>
+                <td><?=$task->id;?></td>
+                <td><?=$task->title;?></td>
+                <td><?=$task->description;?></td>
+                <td><?=$task->completed;?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
     </header>
 </body>
 </html>
