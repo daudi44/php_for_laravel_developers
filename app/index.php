@@ -2,17 +2,15 @@
 
 require 'app/helpers.php';
 require 'app/Task.php';
-
-//Exemple de creació de tasques
-//$task = new Task(1,'Buy bread','A la panaderia',0);
-//var_dump($task);
-
-//PDO
-$user = 'debian-sys-maint';
-$pass = 'V78vxxs2OflGCP39';
+require 'config.php';
 
 try {
-    $dbh = new PDO('mysql:host=localhost;dbname=phplaraveldevs', $user, $pass);
+    $dbh = new PDO(
+        ($config['database']['databasetype']) .
+        ":host=" . ($config['database']['host']) .
+        ";dbname=" . ($config['database']['name']),
+        $config['database']['user'],
+        $config['database']['password']);
 }catch(\Exception $exception){
     echo 'Error de connexió a la base de dades';
 }
@@ -20,8 +18,5 @@ try {
 $statement = $dbh->prepare('SELECT * FROM tasks;');
 $statement->execute();
 $tasks = $statement->fetchAll(PDO::FETCH_OBJ);
-//var_dump($tasks);
 
-
-//Crido la funció greet
 $greeting = greet();
