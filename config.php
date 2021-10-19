@@ -1,5 +1,5 @@
 <?php
-
+//Model amb les variables que necessitem
 $config = [
 'database' => [
 'user' => 'debian-sys-maint',
