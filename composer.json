@@ -1,0 +1,16 @@
+{
+    "name": "daudi/php_for_laravel_developers",
+    "type": "project",
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "authors": [
+        {
+            "name": "daudi44",
+            "email": "daudi@iesebre.com"
+        }
+    ],
+    "require": {}
+}
