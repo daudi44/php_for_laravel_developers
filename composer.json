@@ -12,5 +12,7 @@
             "email": "daudi@iesebre.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    }
 }
