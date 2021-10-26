@@ -1,5 +1,12 @@
 <?php
-$app = new App();
+use Framework\App;
+use Framework\Database\connection;
+use Framework\Database\database;
 
 //Laravel Service providers
-$app->bind();
+App::bind('config', require 'config.php');
+
+App::bind('database', new database(
+    Connection::make(App::get('config')['database'])
+    )
+);
