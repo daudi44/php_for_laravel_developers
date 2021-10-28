@@ -1,7 +1,9 @@
 <?php
+
+use Framework\App;
+
 require 'vendor/autoload.php';
 require 'framework/bootstrap.php';
-//Demano la info al model
-require 'app/index.php';
-//Crido a la vista
-require 'resources/views/index.blade.php';
+
+//dd($_SERVER['REQUEST_URI']);
+App::get('router')->redirect($_SERVER['REQUEST_URI']);
