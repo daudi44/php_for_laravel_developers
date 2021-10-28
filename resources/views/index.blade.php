@@ -25,6 +25,14 @@
     </style>
 </head>
 <body>
+<nav>
+    <ul>
+        <li><a href="/tasks.html">Tasques</a></li>
+        <li><a href="/users.html">Users</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/about.html">About</a></li>
+    </ul>
+</nav>
     <header>
         <h1><?=$greeting;?></h1>
         <table>
