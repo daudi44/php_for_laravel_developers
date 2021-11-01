@@ -10,23 +10,9 @@
             </div>
         </header>
         <main>
-            <h1><?=$greeting;?></h1>
-            <table>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Completed</th>
-                </tr>
-                <?php foreach ($tasks as $task): ?>
-                <tr>
-                    <td><?=$task->id;?></td>
-                    <td><?=$task->title;?></td>
-                    <td><?=$task->description;?></td>
-                    <td><?=$task->completed;?></td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet atque commodi cum deleniti dolorem, dolores excepturi illum itaque laborum libero maiores maxime modi molestiae non quisquam suscipit unde voluptatibus.
+            </div>
         </main>
 </header>
 </div>
