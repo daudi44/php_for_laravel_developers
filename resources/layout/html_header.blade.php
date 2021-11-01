@@ -1,17 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full bg-gray-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
 </head>
-<body>
-<!--Separation of concerns -> En diferents fitxers/seccions-->
-<!--MVC -> Model Vista Controlador -> Laravel Help-->
-
-    <!--CORRECTE-->
-    <?php echo '<h1>Hello world</h1>'; ?>
-</body>
-</html>
+<body class="h-full">
